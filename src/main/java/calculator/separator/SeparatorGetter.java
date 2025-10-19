@@ -35,6 +35,9 @@ public class SeparatorGetter {
         if(redex - '0' >= 0 && redex - '0' <= 9) {
             throw new IllegalArgumentException("구분자로 숫자가 들어왔습니다.");
         }
+        if(redex == '-') {
+            throw new IllegalArgumentException("'" + redex + "'는 구분자가 될 수 없습니다.");
+        }
         return true;
     }
 }
